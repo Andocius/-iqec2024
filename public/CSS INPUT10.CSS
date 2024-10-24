@@ -1,0 +1,709 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Timmana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #031e3b;
+}
+
+/* Main Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    top: 10px;
+    left: 50px;
+    right: 100px;
+    size: 10%;
+
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #228B22;
+}
+
+/* Login Button */
+.navbar .login-btn {
+    padding: 10px 20px;
+    background-color: #228B22;
+    color: white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+    background-color: white;
+    color: #228B22;
+}
+
+
+/* Secondary Navigation Bar */
+.secondary-navbar {
+    position: absolute;
+    top: 100px; /* Slightly below the first navbar */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 5px;
+    z-index: 999;
+    justify-content: space-between;
+    left: 90px;
+}
+
+.secondary-navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.secondary-navbar ul li {
+    margin: 0 20px;
+}
+
+.secondary-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
+
+.secondary-navbar ul li a:hover {
+    background-color: #228B22;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    overflow: hidden; /* Ensures that elements don't overflow */
+    background-image: url('img/about\ event\ 11.0.png');
+    background-size: cover;
+    background-position: top;
+    background-color: #000; /* Fallback color */
+}
+
+
+
+/* First background image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/3rd\ conference1.jpg');
+    background-size: cover;
+    background-position: top;
+    animation: backgroundSlide1 12s infinite;
+    z-index: 1;
+}
+
+/* Second background image */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/headerimage1.png');
+    background-size: cover;
+    background-position: top;
+    animation: backgroundSlide2 12s infinite;
+    z-index: 1;
+    opacity: 1; /* Initially visible */
+    animation-delay: 0s; /* Delay the start of the second image's animation */
+}
+
+/* Third background image as another child element */
+.hero .background-third {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/about\ event\ 11.0.png');
+    background-size: cover;
+    background-position: top;
+    animation: backgroundSlide3 12s infinite;
+    z-index: 2;
+    opacity: 1; /* Initially visible */
+    animation-delay: 6s; /* Delay the start of the third image's animation */
+}
+
+/* Animations for each image */
+@keyframes backgroundSlide1 {
+    0%, 33% { opacity: 1; }
+    34%, 100% { opacity: 0; }
+}
+
+@keyframes backgroundSlide2 {
+    0%, 33% { opacity: 0; }
+    34%, 66% { opacity: 1; }
+    67%, 100% { opacity: 0; }
+}
+
+@keyframes backgroundSlide3 {
+    0%, 66% { opacity: 0; }
+    67%, 100% { opacity: 1; }
+}
+
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 60px;
+}
+
+.hero-content .site-title {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.hero-content .headline {
+    font-size: 1.5rem;
+    color: #fff;
+    position: relative;
+}
+
+
+/* countdown and Countdown Timer */
+.countdown-timer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 11px;
+    border-radius: 15px;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    z-index: 3;
+    gap: 12px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.countdown-timer h1 {
+    font-size: 2.0rem; /* Adjust the value to your desired size */
+}
+
+.timer-container {
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timer-container .col {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.text-uppercase{
+    margin: 0;
+    font-size: 1.0rem;
+}
+
+/* Container for the about-event section */
+.about-event .container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);    
+}
+
+.text-content {
+    padding: 10px;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    color: #228B22;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.text-content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* rationale of the conferenc,holding images and text overlay */
+
+.image-overlay-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Image section */
+.image-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text-overlay h2 {
+    font-size: 2.2rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.text-overlay p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+
+
+/* program timetable and past conferences */
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 250px;
+}
+
+.info-box {
+    position: relative;
+    width: 48%;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(27, 7, 98, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.info-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.info-box .learn-more {
+    text-decoration: none;
+    color:#228B22;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.info-box .learn-more:hover {
+    color: #228B22;
+}
+
+
+.info-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.location {
+    background: url('location-image.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.past-conferences {
+    background: url('past-conference-image.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.info-box .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* speakers section */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+}
+
+.recent-news {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.recent-news h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #228B22;
+}
+
+.news-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.2s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.news-card-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-card-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.news-card-content a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* sponsors section */
+
+.sponsor img{
+    width: 100%;
+    border-radius: 20px;
+}
+  
+.sponsors h2{
+    font-size: 2rem;
+    margin: 20px 0px;
+    color: #228B22;
+}
+
+.sponsor-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sponsor{
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+
+}
+
+.sponsors{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+/* venue */
+.venue {
+    font-size: 1.5rem;
+    margin: 20px 0px;
+    color: #228B22;
+    text-align: center;
+}
+.venue-map {
+    padding: 10px;
+    border-radius: 10px;
+    width: 600px;
+    height: 300px;
+    box-shadow: #bbb;
+    margin: 0 auto; /* This will center the map horizontally */
+    display: block; /* Ensures the map behaves as a block element */
+}
+
+.venue h2{
+    font-size: 3rem;
+}
+/* Footer Styling */
+
+footer {
+    background-color: rgb(6, 68, 107);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-box {
+    flex: 1;
+    padding: 0 15px;
+    text-align: left;
+}
+
+.footer-box h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+}
+
+.footer-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-box i {
+    color: #f4f4f4;
+    margin-right: 10px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #228B22;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: black;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+
+
+
+/* program timetable and past conference Responsive for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+}
+
+/*rationale of the coference Responsive for smaller screens */
+@media (max-width: 768px) {
+    .image-overlay-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-section {
+        width: 100%;
+        height: 250px;
+    }
+
+    .text-overlay {
+        width: 80%;
+    }
+}
+
+/* speakers Responsive Design */
+@media (max-width: 768px) {
+    .news-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+/* sponsors responsive design */
+
+
+
+
+
+
+
+/* footers' Responsive for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-box {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+

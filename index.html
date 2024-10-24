@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/CSS INPUT10.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>4th International Quality Education Conference (IQEC)</title>
+ 
+     <!-- Favicon Link -->
+     <!-- Alternatively, if you're using a .png favicon -->
+    <link rel="icon" href="public/img/favicon-16x16.png" type="image/png">
+</head>
+<body>
+  <section class="adrian">
+     <!-- Main Navigation Bar -->
+     <nav class="navbar">
+      <div class="logo">TANZANIA EDUCATION NETWORK</div>
+      <ul class="nav-links">
+          <li><a href="https://x.com/ten_met"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://facebook.com/TanzaniaEducationNetworkTENMET"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/tenmet"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://bit.ly/IQEC-REGISTRATION" class="login-btn">REGISTER NOW</a></li>
+      </ul>
+      </nav>
+
+     <!-- Secondary Navigation Bar -->
+    <nav class="secondary-navbar">
+      <ul>
+          <li><a href="https://www.tenmet.or.tz">Home</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="public/Timetable.html">Program</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+          <li><a href="#conference">Past Conferences</a></li>
+          <li><a href="public/img/IFORMATION PACK.pdf" download="Visitors.pdf">Visitors' Guide</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+     <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+          <h1 class="site-title">4th International Quality Education Conference (IQEC)</h1>
+          <p class="headline">12th – 14th November 2024.<br>Julius Nyerere International Convention Centre, Dar es Salaam, Tanzania.</p>
+      </div>
+
+      
+       <!-- Countdown Timer -->
+    <div id="countdown-section" class="countdown-timer">
+      <div class="timer-container">
+        <div class="col">
+          <h1 id="days" class="text-uppercase">0</h1>
+          <small class="text-uppercase">days</small>
+        </div>
+        <div class="col">
+          <h1 id="hours" class="text-uppercase">0</h1>
+          <small class="text-uppercase">hours</small>
+        </div>
+        <div class="col">
+          <h1 id="minutes" class="text-uppercase">0</h1>
+          <small class="text-uppercase">minutes</small>
+        </div>
+        <div class="col">
+          <h1 id="seconds" class="text-uppercase">0</h1>
+          <small class="text-uppercase">seconds</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Countdown Script -->
+    <script>
+      const formatTime = (time) => (time < 10 ? `0${time}` : time); // Add leading zero if time < 10
+
+      const countdownTimer = setInterval(() => {
+          const eventDate = new Date("November 12, 2024 09:00:00").getTime(); // Event date
+          const now = new Date().getTime(); // Current time
+          const timeRemaining = eventDate - now; // Difference between event and current time
+
+          if (timeRemaining > 0) {
+              // Calculate time components
+              const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+              const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+              const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+              // Display time with leading zeros for hours, minutes, and seconds
+              document.getElementById('days').innerHTML = days; // No need to add leading zero for days
+              document.getElementById('hours').innerHTML = formatTime(hours);
+              document.getElementById('minutes').innerHTML = formatTime(minutes);
+              document.getElementById('seconds').innerHTML = formatTime(seconds);
+          } else {
+              clearInterval(countdownTimer); // Stop the timer once the event time is reached
+              document.getElementById('countdown-section').innerHTML = "The event has started!";
+          }
+      }, 1000);
+     </script>
+    </section>
+
+  </section>
+
+   <!-- about event -->
+
+    <section class="about-event">
+      <div class="container">
+        <div class="text-content">
+            <h2>ABOUT THE EVENT</h2>
+            <p>In an era marked by unprecedented global challenges, including climate change, economic instability, and social inequalities, the resilience of education systems has never been more critical...</p>
+            <p>The International Quality Education Conference (IQEC) aims to address these challenges head-on, focusing on the theme "Fostering Resilient Education Systems for Sustainable Development in Africa"...</p>
+            <p>The Conference will be conducted with other education stakeholders, including UNICEF.</p>
+        </div>
+        <div class="image-content">
+            <img src="public/img/about event 10.0.png" alt="Event Image">
+        </div>
+      </div>
+    </section>
+   
+       <!-- rationale of the conference -->
+    <section class="conference-rationale">
+      <div class="image-overlay-container">
+          
+          <!-- Right Image Section -->
+          <div class="image-section">
+              <img src="public/img/3rd conference.jpg" alt="Conference Image Right">
+          </div>
+
+          <!-- Center Text Section -->
+          <div class="text-overlay">
+              <h2>RATIONALE OF THE CONFERENCE</h2>
+              <p>
+                  Education systems are at the frontline of societal change, and their ability to adapt and evolve is essential for fostering sustainable development. Resilient education systems are not just about maintaining functionality during crises; they are about ensuring that education remains a powerful tool for societal advancement and equity.
+              </p>
+              <p>
+                  This year has been designated as the Year of Education by the African Union (AU), underscoring the global and regional commitment to advancing educational quality and accessibility. The IQEC conference is timely, offering a platform to leverage regional momentum and address how Tanzania, and other African countries, can build more resilient education systems.
+              </p>
+          </div>
+      </div>
+  </section>
+
+
+  <!-- program timetable and past conferences -->
+  <section>
+    <div class="container">
+      <!-- Conference Location Div -->
+      <div class="info-box location">
+          <div class="content">
+              <h2>PROGRAM TIMETABLE.</h2>
+              <p>This includes all activities at the conference.</p>
+              <a href="public/Timetable.html" class="learn-more">click here</a>
+          </div>
+      </div>
+
+      <!-- Past Conferences Div -->
+      <div id="conference" class="info-box past-conferences">
+          <div class="content">
+              <h2>Past Conferences</h2>
+              <p>Explore the archive of our past International Quality Education Conferences.</p>
+              <a href="https://bit.ly/3W89kny" class="learn-more">View Past Conferences</a>
+          </div>
+      </div>
+  </div>
+  </section>
+
+   <!-- speakers -->
+   <section id="speakers" class="recent-news">
+    <h2>SPEAKERS</h2>
+    <div class="news-cards-container">
+        <!-- News Card 1 -->
+        <div class="news-card">
+            <img src="public/img/profadolfmkenda.jpeg" alt="Award Medal">
+            <div class="news-card-content">
+                <h3>Prof. Adolf Mkenda,</h3>
+                <p>Minister of Education Science and Technology.</p>
+                <a href="https://www.moe.go.tz/en/management/honprof-adolf-mkenda">Learn more ></a>
+            </div>
+        </div>
+        <!-- News Card 2 -->
+        <div class="news-card">
+            <img src="public/img/ms martha 3.png" alt="White House">
+            <div class="news-card-content">
+                <h3>Ms. Martha Makala,</h3>
+                <p>National Coordinator,TEN/MET.</p>
+                <a href="https://www.instagram.com/muzahmakal/?__pwa=1#">Learn more ></a>
+            </div>
+        </div>
+        <!-- News Card 3 -->
+        <div class="news-card">
+            <img src="public/img/Ms faraja.jpg" alt="Mars Mission">
+            <div class="news-card-content">
+                <h3>Ms. Faraja Nyalandu,</h3>
+                <p>TEN/MET Board Chair.</p>
+                <a href="https://www.instagram.com/farajanyalandu/?__pwa=1#">Learn more ></a>
+            </div>
+        </div>
+          <!-- News Card 1 -->
+          <div class="news-card">
+            <img src="public/img/Jumanne mtabalike 1.png" alt="Award Medal">
+            <div class="news-card-content">
+                <h3>Mr. Jumanne Mtambaliike,</h3>
+                <p>CEO, Sahara Ventures</p>
+                <a href="https://www.instagram.com/jrmtambalike/?__pwa=1#">Learn more ></a>
+            </div>
+        </div>
+          <!-- News Card 1 -->
+          <div class="news-card">
+            <img src="public/img/mwasi wilmore 1.png" alt="Award Medal">
+            <div class="news-card-content">
+                <h3>Ms. Mwasi Wilmore,</h3>
+                <p>CEO,Ubongo Kids.</p>
+                <a href="https://www.instagram.com/mwasi_wilmore/?__pwa=1#">Learn more ></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sponsors Section -->
+<section id="sponsors" class="sponsors">
+  <h2>SPONSORS</h2>
+  <div class="sponsor-list">
+    <div class="sponsor"><img src="public/img/unicef.png" alt="UNICEF"><br><br>UNICEF</div>
+    <div class="sponsor"><img src="public/img/pestalozzi.jpeg" alt="Pestalozzi"><br>Pestalozzi</div>
+   
+    <!-- <div class="sponsor"><d src="public/img/" alt="Sponsor 3"></div>
+    <div class="sponsor"><img src="public/img/" alt="Sponsor 4"></div>
+    <div class="sponsor"><img src="public/img/" alt="Sponsor 5"></div>
+    <div class="sponsor"><img src="public/img/" alt="Sponsor 6"></div> -->
+    <!-- More sponsors here -->
+  </div>
+</section>
+
+    <!-- More sponsors here -->
+</section>
+
+
+
+<section>
+  <div id="venue" class="venue">
+    <h2>VENUE.</h2>
+    <p>The conference will be conducted at; <br> Julius Nyerere International Conference Centre, Dar es salaam ,Tanzania.</p>
+  </div>
+<iframe class="venue-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15791.39989171889!2d39.273611099999996!3d-6.8110656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b13ab3b27db%3A0x5e80e2765959908e!2sJulius%20Nyerere%20International%20Convention%20Centre!5e0!3m2!1sen!2stz!4v1696093308133!5m2!1sen!2stz"></iframe>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+          <!-- Contact Information -->
+          <div class="footer-box">
+              <h3>Contact Us</h3>
+              <p><i class="fas fa-phone" style="transform: rotate(90deg);"></i> +255 (0) 22 2775324</p>
+              <p><i class="fas fa-mobile-alt"></i> +255 (0) 748 137089</p>
+              <p><i class="fas fa-envelope"></i><a href="mailto:info@tenmet.or.tz" style="color: white;">iqec2024@tenmet.or.tz</a></p>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="footer-box">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="https://facebook.com/TanzaniaEducationNetworkTENMET"><i class="fab fa-facebook"></i></a>
+                  <a href="https://x.com/ten_met"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/tenmet"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+
+          <!-- Location Information -->  
+          <div class="footer-box">
+              <h3>Our Location</h3>
+              <p><i class="fas fa-map-marker-alt"></i><a href="https://maps.app.goo.gl/Ptn5Jjsdjs2Nef7N6" style="color: white;">Plot 301, House # 1, Lwehabura Road, Mikocheni A, P.O.BOX 13547, Dar Es Salaam.</a></p>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          <p>&copy; 2024 Tanzania education network. All rights reserved.</p>
+      </div>
+  </footer>
+</body>
+</html>
