@@ -17,7 +17,7 @@
       <!-- Main Navigation Bar -->
       <nav class="navbar">
       
-      <ul class="nav-links">
+      <ul class="navbar_links">
           <li><a href="https://x.com/ten_met"><img src="public/img/X - white.png" alt="X logo" class="social-logo"></a></li>
           <li><a href="https://facebook.com/TanzaniaEducationNetworkTENMET"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="http://www.youtube.com/@tanzaniaeducationnetwork5378"><i class="fab fa-youtube"></i></a></li> <!-- YouTube Link -->
@@ -34,6 +34,7 @@
         <div class="logo">
           <img src="public/img/nobg.png" alt="Tanzania Education Network Logo">
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
         <ul>
             <li><a href="https://www.tenmet.or.tz">Home</a></li>
             <li><a href="#venue">Venue</a></li>
@@ -114,40 +115,40 @@
 
    <!-- about event -->
 
-    <section class="about-event">
-      <div class="container">
-        <div class="text-content">
-            <h2>ABOUT THE EVENT</h2>
-            <p>In an era marked by unprecedented global challenges, including climate change, economic instability, and social inequalities, the resilience of education systems has never been more critical...</p>
-            <p>The International Quality Education Conference (IQEC) aims to address these challenges head-on, focusing on the theme "Fostering Resilient Education Systems for Sustainable Development in Africa"...</p>
-            <p>The Conference will be conducted with other education stakeholders, including UNICEF.</p>
-        </div>
-        <div class="image-content">
-            <img src="public/img/about event 10.0.png" alt="Event Image">
-        </div>
+  <section class="about-event">
+    <div class="container">
+      <div class="text-content">
+          <h2>ABOUT THE EVENT</h2>
+          <p>In an era marked by unprecedented global challenges, including climate change, economic instability, and social inequalities, the resilience of education systems has never been more critical...</p>
+          <p>The International Quality Education Conference (IQEC) aims to address these challenges head-on, focusing on the theme "Fostering Resilient Education Systems for Sustainable Development in Africa"...</p>
+          <p>The Conference will be conducted with other education stakeholders, including UNICEF.</p>
       </div>
-    </section>
+      <div class="image-content">
+          <img src="public/img/about event 10.0.png" alt="Event Image">
+      </div>
+    </div>
+  </section>
    
        <!-- rationale of the conference -->
-    <section class="conference-rationale">
-      <div class="image-overlay-container">
-          
-          <!-- Right Image Section -->
-          <div class="image-section">
-              <img src="public/img/3rd conference.jpg" alt="Conference Image Right">
-          </div>
+  <section class="conference-rationale">
+    <div class="image-overlay-container">
+        
+        <!-- Right Image Section -->
+        <div class="image-section">
+            <img src="public/img/3rd conference.jpg" alt="Conference Image Right">
+        </div>
 
-          <!-- Center Text Section -->
-          <div class="text-overlay">
-              <h2>RATIONALE OF THE CONFERENCE</h2>
-              <p>
-                  Education systems are at the frontline of societal change, and their ability to adapt and evolve is essential for fostering sustainable development. Resilient education systems are not just about maintaining functionality during crises; they are about ensuring that education remains a powerful tool for societal advancement and equity.
-              </p>
-              <p>
-                  This year has been designated as the Year of Education by the African Union (AU), underscoring the global and regional commitment to advancing educational quality and accessibility. The IQEC conference is timely, offering a platform to leverage regional momentum and address how Tanzania, and other African countries, can build more resilient education systems.
-              </p>
-          </div>
-      </div>
+        <!-- Center Text Section -->
+        <div class="text-overlay">
+            <h2>RATIONALE OF THE CONFERENCE</h2>
+            <p>
+                Education systems are at the frontline of societal change, and their ability to adapt and evolve is essential for fostering sustainable development. Resilient education systems are not just about maintaining functionality during crises; they are about ensuring that education remains a powerful tool for societal advancement and equity.
+            </p>
+            <p>
+                This year has been designated as the Year of Education by the African Union (AU), underscoring the global and regional commitment to advancing educational quality and accessibility. The IQEC conference is timely, offering a platform to leverage regional momentum and address how Tanzania, and other African countries, can build more resilient education systems.
+            </p>
+        </div>
+    </div>
   </section>
 
 
@@ -287,5 +288,14 @@
           <p>&copy; 2024 Tanzania education network. All rights reserved.</p>
       </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.secondary-navbar');
+        navLinks.classList.toggle('active');
+    }
+  </script>
+  
+
 </body>
 </html>
