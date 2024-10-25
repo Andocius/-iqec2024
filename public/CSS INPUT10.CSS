@@ -86,53 +86,58 @@ body {
 }
 
 
-/* Secondary Navigation Bar */
+/* --- Secondary Navigation Bar Styles --- */
 .secondary-navbar {
     position: absolute;
-    top: 50px; /* Slightly below the first navbar */
-    width: calc(100% - 40px);
+    top: 50px; /* Position below primary navbar */
+    left: 20px;
+    width: calc(100% - 40px); /* Full width with margin */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 5px 30px;
     z-index: 999;
-    justify-content: space-between;
-    left: 20px;
-}
-
-.logo img {
-    height: 100px; /* Resizes logo for consistency */
-}
-
-.secondary-navbar ul {
+  }
+  
+  /* Logo Styling */
+  .logo img {
+    height: 100px; /* Consistent logo size */
+  }
+  
+  /* Navigation Links Container */
+  .nav-links {
+    display: flex;
+  }
+  
+  /* Navigation Links Styling */
+  .nav-links ul {
     list-style: none;
     display: flex;
     gap: 10px; /* Uniform spacing between items */
     margin: 0;
     padding: 0;
-}
-
-
-.secondary-navbar ul li a {
+  }
+  
+  .nav-links ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.1s ease;
-}
-
-.secondary-navbar ul li a:hover {
+  }
+  
+  .nav-links ul li a:hover {
     background-color: #228B22;
     color: white;
     border-radius: 20px;
-}
-
-.menu-toggle {
+  }
+  
+  /* Hamburger Menu Toggle (for Mobile) */
+  .menu-toggle {
     display: none; /* Hidden by default */
     font-size: 24px;
     cursor: pointer;
   }
-
 /* Hero Section */
 .hero {
     width: 100%;
@@ -669,13 +674,24 @@ footer {
         align-items: center;
     }
 
-    /* Navbar adjustments */
-    .secondary-navbar {
+    .nav-links {
+        display: none; /* Hide nav links by default */
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: #333;
     }
-    .secondary-navbar li {
-        margin: 10px 0; /* Increase spacing for vertical layout */
+    
+    /* Show nav links when active */
+    .nav-links.active {
+        display: flex;
+    }
+    
+    /* Hamburger Icon for Mobile */
+    .menu-toggle {
+        display: block;
     }
 
     /* Hero content adjustments */
@@ -711,9 +727,6 @@ footer {
         font-size: 1rem; /* Slightly reduce font size */
         line-height: 1.4; /* Adjust line spacing */
     }
-
-
-
 
 
     /* Info-box and sponsor-list items */

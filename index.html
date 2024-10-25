@@ -28,14 +28,20 @@
     </section> 
     
 
-    <section>    
+    <section>
       <!-- Secondary Navigation Bar -->
       <nav class="secondary-navbar">
+        <!-- Logo -->
         <div class="logo">
           <img src="public/img/nobg.png" alt="Tanzania Education Network Logo">
         </div>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
-        <ul>
+    
+        <!-- Hamburger Icon for Mobile Toggle -->
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> 
+    
+        <!-- Navigation Links Container -->
+        <div class="nav-links">
+          <ul>
             <li><a href="https://www.tenmet.or.tz">Home</a></li>
             <li><a href="#venue">Venue</a></li>
             <li><a href="public/Timetable.html">Program</a></li>
@@ -43,10 +49,11 @@
             <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#conference">Past Conferences</a></li>
             <li><a href="public/img/IFORMATION PACK.pdf" target="_blank">Visitors' Guide</a></li>
-        </ul>
-        
+          </ul>
+        </div>
       </nav>
-    </section>  
+    </section>
+      
   </header>
 
   <section>
@@ -291,9 +298,9 @@
 
   <script>
     function toggleMenu() {
-        const navLinks = document.querySelector('.secondary-navbar');
-        navLinks.classList.toggle('active');
+    document.querySelector('.nav-links').classList.toggle('active');
     }
+
   </script>
   
 
