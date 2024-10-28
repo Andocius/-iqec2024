@@ -135,7 +135,7 @@ body {
 /* Hamburger Menu Toggle (for Mobile) */
 .menu-toggle {
     display: none; /* Hidden by default */
-    font-size: 24px;
+    font-size: 45px;
     cursor: pointer;
    
 }
@@ -807,7 +807,7 @@ footer {
         width: 90%;
     }
 
-    .news-card img {
+    .news-card img{
         width: 100%;
         height: auto; /* Maintains aspect ratio */
         max-height: 250px; /* Optional: limits the height for medium-sized screens */
@@ -817,16 +817,20 @@ footer {
 
 
     /* Info-box and sponsor-list items */
-    .sponsor-list,  {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+ 
 
     /* Sponsors section */
     .sponsor-list {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .sponsor-list img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        max-height: 200px;
+        object-fit: cover;
     }
 
     /* Venue map */
