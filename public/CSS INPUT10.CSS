@@ -268,6 +268,9 @@ body {
     margin-top: 20px; /* Add space between the paragraphs */
 }
 
+.theme-bold {
+    font-weight: bold;
+}
 
 /* countdown and Countdown Timer */
 .countdown-timer{
@@ -504,7 +507,9 @@ body {
 .recent-news h2 {
     font-size: 28px;
     margin-bottom: 30px;
-    color: #228B22;
+    color: #0c0e0c;
+    font-weight: bold;
+    
 }
 
 .news-cards-container {
@@ -622,13 +627,40 @@ body {
     text-align: center;
 }
 
+.logo-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+  
+.logo-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-content: center;
+    /*gap: 20px;*/
+    grid-template-columns: repeat(5, 1fr); /* Set 5 columns on wider screens */
+    /*padding: 0 20px;*/
+}
+.logo-item img {
+    /*mix-blend-mode: multiply; /* Blends white background */
+    max-width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+  
+.logo-item img:hover {
+    transform: scale(1.05); /* Slight zoom on hover for better UX */
+}
+
 
 /* venue */
 .venue {
-    font-size: 1.5rem;
-    margin: 20px 0px;
-    color: #228B22;
+   
+    padding: 40px 20px;
     text-align: center;
+   
 }
 .venue-map {
     padding: 10px;
@@ -641,7 +673,16 @@ body {
 }
 
 .venue h2{
-    font-size: 3rem;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #0c0e0c;
+    font-weight: bold;
+}
+
+.venue p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #0c0e0c;
 }
 /* Footer Styling */
 
@@ -868,6 +909,10 @@ footer {
         border-radius: 20px;
         max-height: 200px;
         object-fit: cover;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Venue map */

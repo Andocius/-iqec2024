@@ -57,6 +57,23 @@
   .news-card-content a:hover {
     text-decoration: underline;
   }
+
+  .back-to-main {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-to-main a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-to-main a:hover {
+    text-decoration: underline;
+  }
+  
   
   /* Responsive Design */
   @media (max-width: 768px) {
