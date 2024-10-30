@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /*background-color: #f4f4f9;*/
+    background-image: url('/public/img/arc.png');
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+  }
+  
+  .bio-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Header with Image and Main Info */
+  .bio-header {
+    text-align: center;
+  }
+  
+  .bio-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .bio-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .bio-header h3 {
+    font-size: 18px;
+    color: #555;
+    font-weight: normal;
+    margin: 5px 0;
+  }
+  
+  .bio-header p {
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0;
+  }
+  
+  /* Bio Content */
+  .bio-content p {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  /* Back Link */
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Large Screens */
+  @media (min-width: 769px) {
+    .bio-container {
+      padding: 30px 40px;
+    }
+  
+    .bio-header h2 {
+      font-size: 28px;
+    }
+  
+    .bio-header h3 {
+      font-size: 20px;
+    }
+  
+    .bio-content p {
+      font-size: 18px;
+    }
+  }
+  
+  /* Mobile Screens (768px and below) */
+  @media (max-width: 768px) {
+    .bio-container {
+      padding: 20px;
+    }
+  
+    .bio-header h2 {
+      font-size: 22px;
+    }
+  
+    .bio-header h3 {
+      font-size: 16px;
+    }
+  
+    .bio-content p {
+      font-size: 15px;
+    }
+  
+    .bio-header img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
