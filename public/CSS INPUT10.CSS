@@ -26,8 +26,11 @@ body {
     /*background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
+
+
 /* Main Navigation Bar */
 .navbar {
+    flex-wrap: wrap;
     font-size: 1.5rem;
     color: white;
     font-weight: bold;
@@ -189,7 +192,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/headerimage1.png');
+    background-image: url('img/iqec_2024.jpg');
     background-size: cover;
     background-position: top;
     animation: backgroundSlide2 12s infinite;
@@ -205,7 +208,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/about\ event\ 11.0.png');
+    background-image: url('img/about\ event\ 11.0.jpg');
     background-size: cover;
     background-position: top;
     animation: backgroundSlide3 12s infinite;
@@ -273,6 +276,9 @@ body {
 }
 
 /* countdown and Countdown Timer */
+
+
+
 .countdown-timer{
     position: absolute;
     display: flex;
@@ -284,7 +290,7 @@ body {
     top: 85%;
     left: 50%;
     transform: translateX(-50%);
-    width: 30%;
+    width: 35%;
     z-index: 3;
     gap: 12px;
     margin: 0 auto;
@@ -634,18 +640,20 @@ body {
   
 .logo-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 1rem;
+    margin: 0;
     justify-content: center;
     /*gap: 20px;*/
-    grid-template-columns: repeat(5, 1fr); /* Set 5 columns on wider screens */
+    grid-template-columns: repeat(6, 1fr); /* Set 5 columns on wider screens */
     /*padding: 0 20px;*/
 }
 .logo-item img {
     /*mix-blend-mode: multiply; /* Blends white background */
+    line-height: 0;
     max-width: 100%;
     height: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -655,14 +663,14 @@ body {
 }
 
 
-/* venue */
-.venue {
+/* location */
+.location {
    
     padding: 40px 20px;
     text-align: center;
    
 }
-.venue-map {
+.location-map {
     padding: 10px;
     border-radius: 10px;
     width: 50%;
@@ -672,14 +680,14 @@ body {
     display: block; /* Ensures the map behaves as a block element */
 }
 
-.venue h2{
+.location h2{
     font-size: 28px;
     margin-bottom: 30px;
     color: #0c0e0c;
     font-weight: bold;
 }
 
-.venue p{
+.location p{
     font-size: 20px;
     margin-bottom: 30px;
     color: #0c0e0c;
@@ -912,8 +920,8 @@ footer {
     }
 
     .logo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.25rem;
 
     }
 
@@ -929,8 +937,8 @@ footer {
         transform: scale(1.05); /* Slight zoom on hover */
     }
 
-    /* Venue map */
-    .venue-map {
+    /* Location map */
+    .location-map {
         width: 90%; /* Adjust width for smaller screens */
     }
 
@@ -940,5 +948,12 @@ footer {
         text-align: center;
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    .logo-item img {
+        padding: 0.3rem; /* Adjusted for Safari */
+    }
+}
+
 
 

@@ -13,7 +13,7 @@
 </head>
 <body>
   <header>
-    <section class="webpage">
+    <section class="main-header">
       <!-- Main Navigation Bar -->
       <nav class="navbar">
       
@@ -28,7 +28,7 @@
     </section> 
     
 
-    <section>
+    <section class="secondary-section">
       <!-- Secondary Navigation Bar -->
       <nav class="secondary-navbar">
         <!-- Logo -->
@@ -43,7 +43,7 @@
         <div class="nav-links">
           <ul>
             <li><a href="https://www.tenmet.or.tz">Home</a></li>
-            <li><a href="#venue">Venue</a></li>
+            <li><a href="#location">Location</a></li>
             <li><a href="public/Timetable.html">Program</a></li>
             <li><a href="#speakers">Speakers</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
@@ -94,26 +94,35 @@
       const formatTime = (time) => (time < 10 ? `0${time}` : time); // Add leading zero if time < 10
 
       const countdownTimer = setInterval(() => {
-          const eventDate = new Date("November 12, 2024 09:00:00").getTime(); // Event date
+          const eventDate = new Date("November 12, 2024 09:00:00").getTime(); // Event start date
+          const eventEndDate = new Date("November 14, 2024 14:00:00").getTime(); // Event end date
           const now = new Date().getTime(); // Current time
-          const timeRemaining = eventDate - now; // Difference between event and current time
+          
 
-          if (timeRemaining > 0) {
-              // Calculate time components
-              const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-              const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-              const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+          if (now < eventDate) {
+            // Calculate time components if the event hasn't started
+            const timeRemaining = eventDate - now;
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-              // Display time with leading zeros for hours, minutes, and seconds
-              document.getElementById('days').innerHTML = days; // No need to add leading zero for days
-              document.getElementById('hours').innerHTML = formatTime(hours);
-              document.getElementById('minutes').innerHTML = formatTime(minutes);
-              document.getElementById('seconds').innerHTML = formatTime(seconds);
-          } else {
-              clearInterval(countdownTimer); // Stop the timer once the event time is reached
-              document.getElementById('countdown-section').innerHTML = "The event has started!";
-          }
+            // Display time with leading zeros for hours, minutes, and seconds
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = formatTime(hours);
+            document.getElementById('minutes').innerHTML = formatTime(minutes);
+            document.getElementById('seconds').innerHTML = formatTime(seconds);
+
+            } else if (now >= eventDate && now < eventEndDate) {
+                // Event is currently ongoing
+                clearInterval(countdownTimer); // Stop the timer display
+                document.getElementById('countdown-section').innerHTML = "Welcome to the 4th IQEC! Explore insights on resilient and sustainable education in Africa.";
+
+            } else {
+                // Event has ended
+                clearInterval(countdownTimer);
+                document.getElementById('countdown-section').innerHTML = "Thank you for joining IQEC 2024! Get ready for the 5th International Quality Education Conference.";
+            }
       }, 1000);
     </script>
     
@@ -192,7 +201,7 @@
             <div class="news-card-content">
                 <h3>Prof. Adolf Mkenda</h3>
                 <p>Minister of Education Science and Technology.</p>
-                <a href="https://www.moe.go.tz/en/management/honprof-adolf-mkenda">Learn more ></a>
+                <a href="public/bio/adolf.html">Read Bio</a>
             </div>
         </div>
 
@@ -202,7 +211,7 @@
           <div class="news-card-content">
               <h3>Ms. Faraja Nyalandu</h3>
               <p>TEN/MET Board Chair.</p>
-              <a href="https://www.linkedin.com/in/faraja-kotta-0755a4a1/?originalSubdomain=tz">Learn more ></a>
+              <a href="public/bio/faraja.html">Read Bio</a>
           </div>
       </div>
 
@@ -212,7 +221,7 @@
             <div class="news-card-content">
                 <h3>Ms. Martha Makala</h3>
                 <p>National Coordinator,TEN/MET.</p>
-                <a href="https://www.instagram.com/muzahmakal/?__pwa=1#">Learn more ></a>
+                <a href="public/bio/martha.html">Read Bio</a>
             </div>
         </div>
         
@@ -222,7 +231,7 @@
             <div class="news-card-content">
                 <h3>H.E Ambassador Mahmoud Thabit Kombo</h3>
                 <p>Minister of Foreign Affairs and East African Cooperation, URT.</p>
-                <a href="https://www.tzembassy.go.tz/ambassadors/view/mahmoud-thabit-kombo">Learn more ></a>
+                <a href="public/bio/mahmoud.html">Read Bio</a>
             </div>
         </div>
           <!-- News Card 1 -->
@@ -231,7 +240,7 @@
             <div class="news-card-content">
                 <h3>Hon. Lela Muhamed Mussa</h3>
                 <p>Minister of Education and Vocational Training</p>
-                <a href="https://www.instagram.com/hon.lelamuhamedmussa/?hl=en">Learn more ></a>
+                <a href="public/bio/lela.html">Read Bio</a>
             </div>
         </div>
     </div>
@@ -249,7 +258,8 @@
   <div class="logo-grid">
     <!-- Replace src values with actual logo paths for each steering committee member -->
     <div class="logo-item"><img src="public/steering/aga khan foundation.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/steering/camfeed-removebg-preview.png" alt="Camfeed Logo"></div>
+    <div class="logo-item"><img src="public/steering/camfeed-removebg-preview.png" alt="Camfed Logo"></div>
+    <div class="logo-item"><img src="public/steering/cssc-removebg-preview.png" alt="CSSC Logo"></div>
     <!-- Add more logos as needed -->
     <div class="logo-item"><img src="public/steering/unhcr1.png" alt="UNHCR Logo"></div>
     <div class="logo-item"><img src="public/steering/plan-international-white-removebg-preview.png" alt="Plan International Logo"></div>
@@ -259,6 +269,7 @@
     <div class="logo-item"><img src="public/steering/uwezo_tanzania_cover-removebg-preview.png" alt="Uwezo Tanzania Logo"></div>
     <div class="logo-item"><img src="public/steering/save-the-children-logo.svg" alt="Save the Children Logo"></div>
     <div class="logo-item"><img src="public/steering/tai-logo-black-removebg-preview.png" alt="Tai Logo"></div>
+    <div class="logo-item"><img src="public/steering/shule direct.png" alt="Shule Direct Logo"></div>
   </div>
 </section>
 
@@ -268,27 +279,27 @@
   <div class="logo-grid">
     <!-- Replace src values with actual logo paths for each sponsor -->
     <div class="logo-item"><img src="public/sponsors/educationoutloud-removebg-preview.png" alt="Education Outloud Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/gpe-removebg-preview.png" alt="UNICEF Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/gpe-removebg-preview.png" alt="GPE Logo"></div>
     <!-- Add more logos as needed -->
-    <div class="logo-item"><img src="public/sponsors/oxfam_danmark-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/malala_fund-removebg-preview.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/echidna_giving-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/aga khan foundation.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/united-nations-childrens-fund-unicef-vector-logo-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/camfeed-removebg-preview.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/plan-international-white-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/msichana-removebg-preview.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/educate-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/unhcr1.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/pestalozzi-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/we_world-removebg-preview.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/World_Vison_Logo_Jpg-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/logo-hakielimu.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/flaviana_matata_foundation-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/cssc-removebg-preview.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/BRAC_logo-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/save-the-children-logo.svg" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/nmb-removebg-preview.png" alt="Agha Khan Foundation Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/oxfam_danmark-removebg-preview.png" alt="Oxfam Danmark Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/malala_fund-removebg-preview.png" alt="Malala Fund Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/echidna_giving-removebg-preview.png" alt="Echidna Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/aga khan foundation.png" alt="Aga Khan Foundation Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/united-nations-childrens-fund-unicef-vector-logo-removebg-preview.png" alt="UNICEF Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/camfeed-removebg-preview.png" alt="Camfed Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/plan-international-white-removebg-preview.png" alt="Plan International Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/msichana-removebg-preview.png" alt="Msichana Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/educate-removebg-preview.png" alt="Educate Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/unhcr1.png" alt="UNHCR Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/pestalozzi-removebg-preview.png" alt="Pestalozzi Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/we_world-removebg-preview.png" alt="We World Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/World_Vison_Logo_Jpg-removebg-preview.png" alt="World Vision Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/logo-hakielimu.png" alt="Hakielimu Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/flaviana_matata_foundation-removebg-preview.png" alt="flaviana Matata Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/cssc-removebg-preview.png" alt="CSSC Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/BRAC_logo-removebg-preview.png" alt="BRAC Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/save-the-children-logo.svg" alt="Save the children Logo"></div>
+    <div class="logo-item"><img src="public/sponsors/nmb-removebg-preview.png" alt="NMB Logo"></div>
 
 
 
@@ -299,11 +310,11 @@
 
 
   <section>
-    <div id="venue" class="venue">
-      <h2>VENUE.</h2>
+    <div id="location" class="location">
+      <h2>LOCATION.</h2>
       <p>The conference will be conducted at; <br> Julius Nyerere International Conference Centre, Dar es salaam ,Tanzania.</p>
     </div>
-  <iframe class="venue-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15791.39989171889!2d39.273611099999996!3d-6.8110656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b13ab3b27db%3A0x5e80e2765959908e!2sJulius%20Nyerere%20International%20Convention%20Centre!5e0!3m2!1sen!2stz!4v1696093308133!5m2!1sen!2stz"></iframe>
+  <iframe class="location-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15791.39989171889!2d39.273611099999996!3d-6.8110656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b13ab3b27db%3A0x5e80e2765959908e!2sJulius%20Nyerere%20International%20Convention%20Centre!5e0!3m2!1sen!2stz!4v1696093308133!5m2!1sen!2stz"></iframe>
   </section>
 
   <!-- Footer Section -->
