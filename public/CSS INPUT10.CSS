@@ -464,13 +464,13 @@ body {
 
 .info-box .learn-more {
     text-decoration: none;
-    color:#228B22;
+    color:#030303;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .info-box .learn-more:hover {
-    color: #228B22;
+    color: #8ad38a;
 }
 
 
