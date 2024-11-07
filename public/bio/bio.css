@@ -13,7 +13,8 @@ body {
   .bio-container {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
+    /*background-image: url('/public/img/arc.png');*/
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;

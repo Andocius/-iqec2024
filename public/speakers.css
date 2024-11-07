@@ -1,9 +1,55 @@
+
+/* Navigation Bar Styling */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* Or any background color to ensure readability */
+  z-index: 1000; /* To ensure it stays above other content */
+}
+
+.fixed-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around; /* Adjust as needed for alignment */
+  
+}
+
+.fixed-nav li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: rgb(128, 53, 53); /* Adjust color as needed */
+  font-weight: bold;
+}
+
+.fixed-nav li a:hover {
+  background-color: rgb(128, 53, 53); /* Background color change on hover */
+  color: white; /* Text color change on hover */
+  border-radius: 5px; /* Optional rounded corners */
+}
+/* Hamburger button styling */
+.hamburger {
+  display: none; /* Hide on larger screens */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: rgb(128, 53, 53);
+  padding: 10px;
+  cursor: pointer;
+  margin-left: auto; /* Push it to the right */
+}
+
+
 /* All Speakers Section */
 #all-speakers h2 {
     font-size: 28px;
     text-align: center;
-    color: #228B22;
+    color: #040504;
     margin-bottom: 20px;
+    margin-top: 15px;
   }
   
   .news-cards-container-all {
@@ -77,6 +123,29 @@
   
   /* Responsive Design */
   @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show hamburger on smaller screens */
+    }
+  
+    #nav-menu {
+      display: none; /* Hide menu by default on mobile */
+      width: 100%;
+    }
+  
+    /* Show menu when active */
+    #nav-menu.active {
+      display: block;
+    }
+  
+    .fixed-nav ul {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+    
+    .fixed-nav li a {
+      padding: 15px;
+      font-size: 16px;
+    }
     .news-cards-container-all {
         grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns on smaller screens */
     }
