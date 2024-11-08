@@ -55,6 +55,7 @@ body {
   .bio-content p {
     color: #666;
     margin-bottom: 15px;
+    text-align: justify;
   }
   
   /* Back Link */
