@@ -176,7 +176,7 @@
           <div class="content">
               <h2>PROGRAM TIMETABLE.</h2>
               <p>This includes all activities at the conference.</p>
-              <a href="public/img/IQEC 2024 Program 041124.pdf" class="learn-more">click here to view</a>
+              <a href="public/img/IQEC 2024 Program.pdf" class="learn-more">click here to view</a>
           </div>
       </div>
 
@@ -214,7 +214,7 @@
         <div class="news-card-content">
             <h3>Hon. Mohammed Mchengerwa</h3>
             <p>Minister, PO-RALG.</p>
-            <a href="#speakers">Read Bio</a>
+            <a href="public/bio/mchengerwa.html">Read Bio</a>
         </div>
       </div>
       <!-- News Card 2 -->
@@ -223,7 +223,7 @@
         <div class="news-card-content">
             <h3>Hon. Lela Muhamed Mussa</h3>
             <p>Minister of Education and Vocational Training</p>
-            <a href="#speakers">Read Bio</a>
+            <a href="public/bio/lela.html">Read Bio</a>
         </div>
       </div>
       <!-- News Card 3 -->
@@ -232,7 +232,7 @@
         <div class="news-card-content">
             <h3>Prof. Adolf Mkenda</h3>
             <p>Minister of Education Science and Technology.</p>
-            <a href="#speakers">Read Bio</a>
+            <a href="public/bio/adolf.html">Read Bio</a>
         </div>
       </div>
         
@@ -242,7 +242,7 @@
         <div class="news-card-content">
             <h3>H.E Ambassador Mahmoud Thabit Kombo</h3>
             <p>Minister of Foreign Affairs and East African Cooperation, URT.</p>
-            <a href="#speakers">Read Bio</a>
+            <a href="public/bio/mahmoud.html">Read Bio</a>
         </div>
       </div>
       <!-- News Card 5 -->
@@ -251,7 +251,7 @@
         <div class="news-card-content">
             <h3>Ms. Faraja Nyalandu</h3>
             <p>TEN/MET Board Chair.</p>
-            <a href="#speakers">Read Bio</a>
+            <a href="public/bio/faraja.html">Read Bio</a>
         </div>
       </div>
 
@@ -326,10 +326,30 @@
   <section>
     <div id="location" class="location">
       <h2>LOCATION.</h2>
-      <p>The conference will be conducted at; <br> Julius Nyerere International Conference Centre, Dar es salaam ,Tanzania.</p>
+      <p id="conference-message">The conference will be conducted at; <br> Julius Nyerere International Conference Centre, Dar es Salaam, Tanzania.</p>
     </div>
   <iframe class="location-map"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15791.39989171889!2d39.273611099999996!3d-6.8110656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b13ab3b27db%3A0x5e80e2765959908e!2sJulius%20Nyerere%20International%20Convention%20Centre!5e0!3m2!1sen!2stz!4v1696093308133!5m2!1sen!2stz"></iframe>
   </section>
+
+  <script>
+    // Function to update the conference message based on the current date and time
+    function updateConferenceMessage() {
+      const messageElement = document.getElementById('conference-message');
+      const now = new Date();
+      const conferenceStart = new Date('2024-11-12T09:00:00');
+      const conferenceEnd = new Date('2024-11-14T14:00:00');
+  
+      if (now >= conferenceStart && now < conferenceEnd) {
+        messageElement.innerHTML = "The conference is being conducted at; <br> Julius Nyerere International Conference Centre, Dar es salaam, Tanzania.";
+      } else if (now >= conferenceEnd) {
+        messageElement.innerHTML = "The conference was conducted at; <br> Julius Nyerere International Conference Centre, Dar es salaam, Tanzania.";
+      }
+    }
+  
+    // Run the function initially and set an interval to check every minute
+    updateConferenceMessage();
+    setInterval(updateConferenceMessage, 60000); // Check every 60 seconds
+  </script>
 
   <!-- Footer Section -->
   <footer>

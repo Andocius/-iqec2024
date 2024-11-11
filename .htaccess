@@ -1,0 +1,8 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect requests for /speakers to /public/speakers.html
+RewriteRule ^speakers$ /public/speakers.html [L]
+
+# Redirect requests for bio URLs to their corresponding files in the /public/bio directory
+RewriteRule ^bio/([^/]+)$ /public/bio/$1.html [L]
