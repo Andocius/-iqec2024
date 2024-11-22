@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="stylesheet" href="public/CSS INPUT10.CSS">
+    <link rel="stylesheet" href="/static/CSS INPUT10.CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>4th International Quality Education Conference (IQEC)</title>
  
      <!-- Favicon Link -->
      <!-- Alternatively, if you're using a .png favicon -->
-    <link rel="icon" href="public/img/favicon-16x16.png" type="image/png">
+    <link rel="icon" href="/static/img/favicon-16x16.png" type="image/png">
 </head>
 <body>
   <header>
@@ -18,7 +18,7 @@
       <nav class="navbar">
       
       <ul class="navbar_links">
-          <li><a href="https://x.com/ten_met"><img src="public/img/X - white.png" alt="X logo" class="social-logo"></a></li>
+          <li><a href="https://x.com/ten_met"><img src="/static/img/X - white.png" alt="X logo" class="social-logo"></a></li>
           <li><a href="https://facebook.com/TanzaniaEducationNetworkTENMET"><i class="fab fa-facebook-f"></i></a></li>
           <li><a href="http://www.youtube.com/@tanzaniaeducationnetwork5378"><i class="fab fa-youtube"></i></a></li> <!-- YouTube Link -->
           <li><a href="https://www.instagram.com/tenmet"><i class="fab fa-instagram"></i></a></li>
@@ -33,7 +33,7 @@
       <nav class="secondary-navbar">
         <!-- Logo -->
         <div class="logo">
-          <img src="public/img/nobg.png" alt="Tanzania Education Network Logo">
+          <img src="static/img/nobg.png" alt="Tanzania Education Network Logo">
         </div>
     
         <!-- Hamburger Icon for Mobile Toggle -->
@@ -47,8 +47,8 @@
             <li><a href="#program">Program</a></li>
             <li><a href="#speakers">Speakers</a></li>
             <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#conference">Past Conferences</a></li>
-            <li><a href="public/img/INFORMATION PACK  edited.pdf" target="_blank">Visitors' Guide</a></li>
+            <li><a href="/static/img/INFORMATION PACK  edited.pdf" target="_blank">Visitors' Guide</a></li>
+            <li><a href="{{ url_for('certificates') }}" class="highlighted-link" title="Access your certificates">Certificates</a></li>
           </ul>
         </div>
       </nav>
@@ -140,7 +140,7 @@
           <p>The Conference will be conducted with other education stakeholders, including UNICEF.</p>
       </div>
       <div class="image-content">
-          <img src="public/img/about event 10.0.png" alt="Event Image">
+          <img src="/static/img/about event 10.0.png" alt="Event Image">
       </div>
     </div>
   </section>
@@ -151,7 +151,7 @@
         
         <!-- Right Image Section -->
         <div class="image-section">
-            <img src="public/img/3rd conference.jpg" alt="Conference Image Right">
+            <img src="/static/img/3rd conference.jpg" alt="Conference Image Right">
         </div>
 
         <!-- Center Text Section -->
@@ -176,7 +176,7 @@
           <div class="content">
               <h2>PROGRAM TIMETABLE.</h2>
               <p>This includes all activities at the conference.</p>
-              <a href="public/img/IQEC 2024 Program.pdf" class="learn-more">click here to view</a>
+              <a href="/static/img/IQEC 2024 Program.pdf" class="learn-more">click here to view</a>
           </div>
       </div>
 
@@ -210,48 +210,48 @@
     <div class="news-cards-container">
       <!-- News Card 1 -->
       <div class="news-card">
-        <img src="public/speakers/mchengerwa.jpeg" alt="Hon. Mohammed Mchengerwa">
+        <img src="/static/speakers/mchengerwa.jpeg" alt="Hon. Mohammed Mchengerwa">
         <div class="news-card-content">
             <h3>Hon. Mohammed Mchengerwa</h3>
             <p>Minister, PO-RALG.</p>
-            <a href="public/bio/mchengerwa.html">Read Bio</a>
+            <a href="/static/bio/mchengerwa.html">Read Bio</a>
         </div>
       </div>
       <!-- News Card 2 -->
       <div class="news-card">
-        <img src="public/speakers/Hon. Lela M Mussa.jpg" alt="Hon. Lela Muhamed Mussa">
+        <img src="/static/speakers/Hon. Lela M Mussa.jpg" alt="Hon. Lela Muhamed Mussa">
         <div class="news-card-content">
             <h3>Hon. Lela Muhamed Mussa</h3>
             <p>Minister of Education and Vocational Training</p>
-            <a href="public/bio/lela.html">Read Bio</a>
+            <a href="/static/bio/lela.html">Read Bio</a>
         </div>
       </div>
       <!-- News Card 3 -->
       <div class="news-card">
-        <img src="public/img/profadolfmkenda.jpeg" alt="Prof. Adolf Mkenda">
+        <img src="/static/img/profadolfmkenda.jpeg" alt="Prof. Adolf Mkenda">
         <div class="news-card-content">
             <h3>Prof. Adolf Mkenda</h3>
             <p>Minister of Education Science and Technology.</p>
-            <a href="public/bio/adolf.html">Read Bio</a>
+            <a href="/static/bio/adolf.html">Read Bio</a>
         </div>
       </div>
         
       <!-- News Card 4 -->
       <div class="news-card">
-        <img src="public/speakers/H.E Mahmoud_Thabit_Kombo.jpg" alt="H.E Ambassador Mahmoud Thabit Kombo">
+        <img src="/static/speakers/H.E Mahmoud_Thabit_Kombo.jpg" alt="H.E Ambassador Mahmoud Thabit Kombo">
         <div class="news-card-content">
             <h3>H.E Ambassador Mahmoud Thabit Kombo</h3>
             <p>Minister of Foreign Affairs and East African Cooperation, URT.</p>
-            <a href="public/bio/mahmoud.html">Read Bio</a>
+            <a href="/static/bio/mahmoud.html">Read Bio</a>
         </div>
       </div>
       <!-- News Card 5 -->
       <div class="news-card">
-        <img src="public/img/Ms faraja.jpg" alt="Ms. Faraja Nyalandu">
+        <img src="/static/img/Ms faraja.jpg" alt="Ms. Faraja Nyalandu">
         <div class="news-card-content">
             <h3>Ms. Faraja Nyalandu</h3>
             <p>TEN/MET Board Chair.</p>
-            <a href="public/bio/faraja.html">Read Bio</a>
+            <a href="/static/bio/faraja.html">Read Bio</a>
         </div>
       </div>
 
@@ -260,7 +260,7 @@
 
       <!-- View More Button -->
     <div class="view-more-container">
-      <a href="public/speakers.html" class="view-more-button">View All Speakers</a>
+      <a href="/static/speakers.html" class="view-more-button">View All Speakers</a>
     </div>
 
   </section>
@@ -270,20 +270,20 @@
   <h2>STEERING COMMITTEE</h2>
   <div class="logo-grid">
     <!-- Replace src values with actual logo paths for each steering committee member -->
-    <div class="logo-item"><img src="public/steering/aga khan foundation.png" alt="Agha Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/steering/camfeed-removebg-preview.png" alt="Camfed Logo"></div>
-    <div class="logo-item"><img src="public/steering/cssc-removebg-preview.png" alt="CSSC Logo"></div>
+    <div class="logo-item"><img src="/static/steering/aga khan foundation.png" alt="Agha Khan Foundation Logo"></div>
+    <div class="logo-item"><img src="/static/steering/camfeed-removebg-preview.png" alt="Camfed Logo"></div>
+    <div class="logo-item"><img src="/static/steering/cssc-removebg-preview.png" alt="CSSC Logo"></div>
     <!-- Add more logos as needed -->
-    <div class="logo-item"><img src="public/steering/unhcr1.png" alt="UNHCR Logo"></div>
-    <div class="logo-item"><img src="public/steering/plan-international-white-removebg-preview.png" alt="Plan International Logo"></div>
-    <div class="logo-item"><img src="public/steering/logo-hakielimu.png" alt="Hakielimu Logo"></div>
-    <div class="logo-item"><img src="public/steering/african_child_projects-removebg-preview.png" alt="African Child Projects Logo"></div>
-    <div class="logo-item"><img src="public/steering/flaviana_matata_foundation-removebg-preview.png" alt="flaviana matata Foundation Logo"></div>
-    <div class="logo-item"><img src="public/steering/uwezo_tanzania_cover-removebg-preview.png" alt="Uwezo Tanzania Logo"></div>
-    <div class="logo-item"><img src="public/steering/save-the-children-logo.svg" alt="Save the Children Logo"></div>
-    <div class="logo-item"><img src="public/steering/tai-logo-black-removebg-preview.png" alt="Tai Logo"></div>
-    <div class="logo-item"><img src="public/steering/shule direct.png" alt="Shule Direct Logo"></div>
-    <div class="logo-item"><img src="public/steering/sahara ventures.png" alt="Sahara Ventures Logo"></div>
+    <div class="logo-item"><img src="/static/steering/unhcr1.png" alt="UNHCR Logo"></div>
+    <div class="logo-item"><img src="/static/steering/plan-international-white-removebg-preview.png" alt="Plan International Logo"></div>
+    <div class="logo-item"><img src="/static/steering/logo-hakielimu.png" alt="Hakielimu Logo"></div>
+    <div class="logo-item"><img src="/static/steering/african_child_projects-removebg-preview.png" alt="African Child Projects Logo"></div>
+    <div class="logo-item"><img src="/static/steering/flaviana_matata_foundation-removebg-preview.png" alt="flaviana matata Foundation Logo"></div>
+    <div class="logo-item"><img src="/static/steering/uwezo_tanzania_cover-removebg-preview.png" alt="Uwezo Tanzania Logo"></div>
+    <div class="logo-item"><img src="/static/steering/save-the-children-logo.svg" alt="Save the Children Logo"></div>
+    <div class="logo-item"><img src="/static/steering/tai-logo-black-removebg-preview.png" alt="Tai Logo"></div>
+    <div class="logo-item"><img src="/static/steering/shule direct.png" alt="Shule Direct Logo"></div>
+    <div class="logo-item"><img src="/static/steering/sahara ventures.png" alt="Sahara Ventures Logo"></div>
   </div>
 </section>
 
@@ -292,28 +292,28 @@
   <h2>SPONSORS</h2>
   <div class="logo-grid">
     <!-- Replace src values with actual logo paths for each sponsor -->
-    <div class="logo-item"><img src="public/sponsors/educationoutloud-removebg-preview.png" alt="Education Outloud Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/gpe-removebg-preview.png" alt="GPE Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/educationoutloud-removebg-preview.png" alt="Education Outloud Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/gpe-removebg-preview.png" alt="GPE Logo"></div>
     <!-- Add more logos as needed -->
-    <div class="logo-item"><img src="public/sponsors/oxfam_danmark-removebg-preview.png" alt="Oxfam Danmark Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/malala_fund-removebg-preview.png" alt="Malala Fund Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/echidna_giving-removebg-preview.png" alt="Echidna Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/aga khan foundation.png" alt="Aga Khan Foundation Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/united-nations-childrens-fund-unicef-vector-logo-removebg-preview.png" alt="UNICEF Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/camfeed-removebg-preview.png" alt="Camfed Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/plan-international-white-removebg-preview.png" alt="Plan International Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/msichana-removebg-preview.png" alt="Msichana Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/educate-removebg-preview.png" alt="Educate Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/unhcr1.png" alt="UNHCR Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/pestalozzi-removebg-preview.png" alt="Pestalozzi Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/we_world-removebg-preview.png" alt="We World Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/World_Vison_Logo_Jpg-removebg-preview.png" alt="World Vision Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/logo-hakielimu.png" alt="Hakielimu Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/flaviana_matata_foundation-removebg-preview.png" alt="flaviana Matata Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/cssc-removebg-preview.png" alt="CSSC Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/BRAC_logo-removebg-preview.png" alt="BRAC Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/save-the-children-logo.svg" alt="Save the children Logo"></div>
-    <div class="logo-item"><img src="public/sponsors/nmb-removebg-preview.png" alt="NMB Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/oxfam_danmark-removebg-preview.png" alt="Oxfam Danmark Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/malala_fund-removebg-preview.png" alt="Malala Fund Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/echidna_giving-removebg-preview.png" alt="Echidna Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/aga khan foundation.png" alt="Aga Khan Foundation Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/united-nations-childrens-fund-unicef-vector-logo-removebg-preview.png" alt="UNICEF Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/camfeed-removebg-preview.png" alt="Camfed Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/plan-international-white-removebg-preview.png" alt="Plan International Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/msichana-removebg-preview.png" alt="Msichana Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/educate-removebg-preview.png" alt="Educate Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/unhcr1.png" alt="UNHCR Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/pestalozzi-removebg-preview.png" alt="Pestalozzi Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/we_world-removebg-preview.png" alt="We World Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/World_Vison_Logo_Jpg-removebg-preview.png" alt="World Vision Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/logo-hakielimu.png" alt="Hakielimu Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/flaviana_matata_foundation-removebg-preview.png" alt="flaviana Matata Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/cssc-removebg-preview.png" alt="CSSC Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/BRAC_logo-removebg-preview.png" alt="BRAC Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/save-the-children-logo.svg" alt="Save the children Logo"></div>
+    <div class="logo-item"><img src="/static/sponsors/nmb-removebg-preview.png" alt="NMB Logo"></div>
 
 
 
@@ -366,7 +366,7 @@
         <div class="footer-box">
             <h3>Follow Us</h3>
             <div class="social-icons">
-              <a href="https://x.com/ten_met"><img src="public/img/X - white.png" alt="X logo" class="twitter-logo"></a>
+              <a href="https://x.com/ten_met"><img src="/static/img/X - white.png" alt="X logo" class="twitter-logo"></a>
               <a href="https://facebook.com/TanzaniaEducationNetworkTENMET"><i class="fab fa-facebook"></i></a>
               <a href="http://www.youtube.com/@tanzaniaeducationnetwork5378"><i class="fab fa-youtube"></i></a> <!-- YouTube Link -->
               <a href="https://www.instagram.com/tenmet"><i class="fab fa-instagram"></i></a>

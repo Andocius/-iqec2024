@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IQEC Certificates</title>
+  <link rel="stylesheet" href="/static/certificates.css"> <!-- Optional CSS -->
+</head>
+<body>
+  <header>
+    <h1>IQEC Participant Certificates</h1>
+    <p>Click on your name below to download your certificate.</p>
+  </header>
+  
+  <main>
+    <input type="text" id="search" onkeyup="filterList()" placeholder="Search for names...">
+  
+    <script>
+        function filterList() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const items = document.querySelectorAll('.grid-item');
+            items.forEach(item => {
+                const name = item.textContent.toLowerCase();
+                item.style.display = name.includes(query) ? '' : 'none';
+            });
+        }
+    </script>
+  
+    <div class="grid">
+      {% for participant in participants %}
+        <div class="grid-item">
+          <a href="{{ participant.certificate_path }}" target="_blank">{{ participant.name }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+  
+  
+  <footer>
+    <p>&copy; 2024 IQEC | All rights reserved.</p>
+  </footer>
+</body>
+</html>
